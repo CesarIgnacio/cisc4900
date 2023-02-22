@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Monk Parakeete Location Map</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="docs/images/favicon.ico"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .leaflet-container {
+        height: 350px;
+        width: 500px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Monk Parakeet Map Location</h1>
+    <div id="map" style="width: 1200px; height: 800px"></div>
+    <script>
+      var map = L.map("map").setView(
+        [40.647607, -73.967136],
+        12,
+        (doubleClickZoom = true),
+        (zoomDelta = 3)
+      );
+
+      var tiles = L.tileLayer(
+        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
+        {
+          maxZoom: 18,
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          id: "mapbox/streets-v11",
+          tileSize: 512,
+          zoomOffset: -1,
+        }
+      ).addTo(map);
+
+      var myIcon = L.icon({
+        iconUrl: "bird.png",
+        iconSize: [50, 40],
+        iconAnchor: [25, 20],
+      });
+      var myIcon2 = L.icon({
+        iconUrl: "parrotblack.png",
+        iconSize: [50, 40],
+        iconAnchor: [25, 20],
+      });
+
+      // const coordinates = {
+      //   latitude: [],
+      //   longitud: [],
+      // };
+      // var marker = L.marker([51.5, -0.09])
+      //   .addTo(map)
+      //   .bindPopup("<b>Hello world!</b><br />I am a popup.")
+      //   .openPopup();
+
+      // var circle = L.circle([51.508, -0.11], {
+      //   color: "red",
+      //   fillColor: "#f03",
+      //   fillOpacity: 0.5,
+      //   radius: 500,
+      // })
+      //   .addTo(map)
+      //   .bindPopup("I am a circle.");
+
+      // var polygon = L.polygon([
+      //   [51.509, -0.08],
+      //   [51.503, -0.06],
+      //   [51.51, -0.047],
+      // ])
+      //   .addTo(map)
+      //   .bindPopup("I am a polygon.");
+
+      // var popup = L.popup()
+      //   .setLatLng([51.513, -0.09])
+      //   .setContent("I am a standalone popup.")
+      //   .openOn(map);
+
+      const mydata = {
+        type: "Feature",
+        properties: { name: 424614301, popupContent: "Monk Parakeet" },
+        geometry: { type: "Point", coordinates: [-34.9005378, -55.2439132] },
+      };
+      console.log(mydata);
+
+      L.marker([40.655543, -73.992231], { icon: myIcon })
+        .bindPopup(
+          "<h3>Monk Parakeet Nest</h3><h4>In USE</h4> <img src='C:/Users/saler/Documents/PYTHON/Scraper/Monk/Images/Monk Parakeet_422485631.jpg' width='300' height='300' /><audio controls><source src= 'C:/Users/saler/Documents/PYTHON/Scraper/Monk/Audio/Monk Parakeet_382687921.mp3' type='audio/mpeg'>"
+        )
+        .addTo(map);
+      L.marker([40.621442706766445, -73.97930275421595], { icon: myIcon2 })
+
+        .bindPopup(
+          "<h3>Monk Parakeet Nest</h3><h4>NOT in USE</h4> <img src='C:/Users/saler/Documents/PYTHON/Scraper/Monk/Images/Monk Parakeet_422504211.jpg' width='300' height='300'/>  <audio controls><source src= 'C:/Users/saler/Documents/PYTHON/Scraper/Monk/Audio/Monk Parakeet_378025831.mp3' type='audio/mpeg'>"
+        )
+        .addTo(map);
+    </script>
+  </body>
+</html>
