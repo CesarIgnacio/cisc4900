@@ -1,271 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="shortcut icon" type="image/png" href="img2/icon.png" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>BCR LAB | Biomimetic & Cognitive Robotics</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img2/icon.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav__links">
-          <li class="nav__item">
-            <a class="nav__link" href="#section--1">Monk Parakeet</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--2">Fiddle Crabs</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3">Past/Current Projects</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--4">Get Involve Now</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Log In</a
-            >
-          </li>
-        </ul>
-      </nav>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <!-- Leaflet is an open-source JavaScript library for creating interactive
+     maps on the web. -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-      <div class="header__title">
-        <!-- <h1 onclick="alert('HTML alert')"> -->
-        <h1>
-          <!-- Green highlight effect -->
-          <span class="highlight">Did</span>
-          you<br />
-          <span class="highlight">Know?</span>
-        </h1>
-        <h4>There are Monk Parakeet and Fiddle Crabs in New York City</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="img2/hero.png"
-          class="header__img"
-          alt="Minimalist bird items"
-        />
-        <img src="img2/Fiddler-Crabs.jpg" alt="Minimalist crab items" />
-      </div>
-    </header>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>BCR LAB | Biomimetic & Cognitive Robotics</title>
 
-    <section class="section" id="section--1">
-      <div class="section__title">
-        <h2 class="section__description">Monk Parakeet</h2>
-        <h3 class="section__header">
-          Study Behiavour of Monk Parakeet Colonies
-        </h3>
-      </div>
+  <script defer src="script.js"></script>
+</head>
 
-      <div class="features">
-        <img
-          src="img2/nest.jpg"
-          data-src="img2/nest.jpg"
-          alt="Nest"
-          class="features__img lazy-img"
-        />
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use href="img2/icons.svg#icon-camera"></use>
-            </svg>
-          </div>
-          <h5 class="features__header">Photographic recordings</h5>
-          <p>
-            We own a database with the locations of many colonies of monk
-            parakeet in New york city
-          </p>
-        </div>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="#section--1">Monk Parakeet</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--2">Fiddle Crabs</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--3">Past/Current Projects</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--4">Get Involve Now</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--btn btn--show-modal" href="#">Log In</a>
+        </li>
+      </ul>
+    </nav>
 
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use href="img2/icons.svg#icon-compass"></use>
-            </svg>
-          </div>
-          <h5 class="features__header">Map</h5>
-          <p>
-            Easy visualization of each colony with our personalize map for easy
-            access.
-          </p>
-        </div>
-        <img
-          src="img2/map.png"
-          data-src="img2/map.png"
-          alt="Map"
-          class="features__img lazy-img"
-        />
-
-        <img
-          src="img2/audio.jpg"
-          data-src="img2/audio.jpg"
-          alt="Audio"
-          class="features__img lazy-img"
-        />
-        <div class="features__feature">
-          <div class="features__icon">
-            <svg>
-              <use href="img2/icons.svg#icon-feather"></use>
-            </svg>
-          </div>
-          <h5 class="features__header">Audio Recordings</h5>
-          <p>We study the diferent patters in the Monk Parakeet calls</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="section--2">
-      <div class="section__title">
-        <h2 class="section__description">Fiddle Crabs</h2>
-
-        <h3 class="section__header">
-          Brooklyn Coasts are fill with Fiddle Crabs
-        </h3>
-        <img src="img2/Fiddler-Crabs.jpg" alt="Minimalist crab items" />
-      </div>
-
-      <div class="operations">
-        <div class="operations__tab-container">
-          
-        </div>
-        
-          <h2>Fiddlers are among the most abundant "large" animals in the marsh; as such, they are important regulators of primary production (Spartina-derived), and decomposition (bacteria and fungi). Fiddler crabs are also important in energy flow within the marsh. They are estimated to consume up to a third of the net production of an emergent marsh and may assimilate 10% of that amount.</h2>
-         
-        
-
-        <div class="operations__content operations__content--2">
-          <div class="operations__icon operations__icon--2">
-            <svg>
-              
-            </svg>
-          </div>
-         
-        </div>
-        <div class="operations__content operations__content--3">
-          <div class="operations__icon operations__icon--3">
-            
-            </svg>
-          </div>
-         
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="section--3">
-      <div class="section__title section__title--testimonials">
-        <h2 class="section__description">Not sure yet?</h2>
-        <h3 class="section__header">Our team is working in many project!</h3>
-      </div>
-
-      <div class="slider">
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">Fiddle Crabs are the Best!</h5>
-            <blockquote class="testimonial__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium quas quisquam non? Quas voluptate nulla minima
-              deleniti optio ullam nesciunt, numquam corporis et asperiores
-              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
-              id alias reiciendis, perferendis facere pariatur dolore veniam
-              autem esse non voluptatem saepe provident nihil molestiae.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img2/user-1.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Aarav Lynn</h6>
-              <p class="testimonial__location">San Francisco, USA</p>
-            </address>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">I like Birds!!</h5>
-            <blockquote class="testimonial__text">
-              Quisquam itaque deserunt ullam, quia ea repellendus provident,
-              ducimus neque ipsam modi voluptatibus doloremque, corrupti
-              laborum. Incidunt numquam perferendis veritatis neque repellendus.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-              deserunt exercitationem deleniti.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img2/user-2.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Miyah Miles</h6>
-              <p class="testimonial__location">London, UK</p>
-            </address>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="testimonial">
-            <h5 class="testimonial__header">I enjoy BCR Lab!</h5>
-            <blockquote class="testimonial__text">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-              incidunt commodi architecto numquam omnis nulla autem,
-              necessitatibus blanditiis modi similique quidem. Odio aliquam
-              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
-              alias reiciendis, perferendis facere.
-            </blockquote>
-            <address class="testimonial__author">
-              <img src="img2/user-3.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Francisco Gomes</h6>
-              <p class="testimonial__location">Lisbon, Portugal</p>
-            </address>
-          </div>
-        </div>
-
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
-      </div>
-    </section>
-
-    <section class="section section--sign-up">
-      <div class="section__title">
-        <h3 class="section__header"></h3>
-      </div>
-      <button class="btn btn--show-modal">Log in</button>
-    </section>
-
-    <div class="modal hidden">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
-        Log in <br />
-        in BCR Lab for<span class="highlight"> more features</span>
-      </h2>
-      <form class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="email" />
-        <button class="btn">Next step &rarr;</button>
-      </form>
+    <div class="header__title">
+      <!-- <h1 onclick="alert('HTML alert')"> -->
+      <h1>
+        <!-- Green highlight effect -->
+        <span class="highlight">Did</span>
+        you<br />
+        <span class="highlight">Know?</span>
+      </h1>
+      <h4>There are Monk Parakeet and Fiddle Crabs in New York City</h4>
+      <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      <img src="img2/hero.png" class="header__img" alt="Minimalist bird items" />
+      <img src="img2/Fiddler-Crabs.jpg" alt="Minimalist crab items" />
     </div>
-    <div class="overlay hidden"></div>
+  </header>
 
-    <!-- <script src="script.js"></script> -->
-  </body>
+  <section class="section" id="section--1">
+    <div class="section__title">
+      <h2 class="section__description">Monk Parakeet</h2>
+      <h3 class="section__header">
+        Study Behiavour of Monk Parakeet Colonies
+      </h3>
+    </div>
+
+    <div class="features">
+      <img src="img2/nest.jpg" data-src="img2/nest.jpg" alt="Nest" class="features__img lazy-img" />
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use href="img2/icons.svg#icon-camera"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">Photographic recordings</h5>
+        <p>
+          We own a database with the locations of many colonies of monk
+          parakeet in New york city
+        </p>
+      </div>
+
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use href="img2/icons.svg#icon-compass"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">Map</h5>
+        <p>
+          Easy visualization of each colony with our personalize map for easy
+          access.
+        </p>
+      </div>
+      <img src="img2/map.png" data-src="img2/map.png" alt="Map" class="features__img lazy-img" />
+
+      <img src="img2/audio.jpg" data-src="img2/audio.jpg" alt="Audio" class="features__img lazy-img" />
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use href="img2/icons.svg#icon-feather"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">Audio Recordings</h5>
+        <p>We study the diferent patters in the Monk Parakeet calls</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="section--2">
+    <div class="section__title">
+      <h2 class="section__description">Fiddle Crabs</h2>
+
+      <h3 class="section__header">
+        Brooklyn Coasts are fill with Fiddle Crabs
+      </h3>
+      <img src="img2/Fiddler-Crabs.jpg" alt="Minimalist crab items" />
+    </div>
+
+    <div class="operations">
+      <div class="operations__tab-container">
+
+      </div>
+
+      <h2>Fiddlers are among the most abundant "large" animals in the marsh; as such, they are important regulators of
+        primary production (Spartina-derived), and decomposition (bacteria and fungi). Fiddler crabs are also important
+        in energy flow within the marsh. They are estimated to consume up to a third of the net production of an
+        emergent marsh and may assimilate 10% of that amount.</h2>
+
+
+
+      <div class="operations__content operations__content--2">
+        <div class="operations__icon operations__icon--2">
+          <svg>
+
+          </svg>
+        </div>
+
+      </div>
+      <div class="operations__content operations__content--3">
+        <div class="operations__icon operations__icon--3">
+
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="section--3">
+    <div class="section__title section__title--testimonials">
+      <h2 class="section__description">Not sure yet?</h2>
+      <h3 class="section__header">Our team is working in many project!</h3>
+    </div>
+
+    <div class="slider">
+      <div class="slide">
+        <div class="testimonial">
+          <h5 class="testimonial__header">Fiddle Crabs are the Best!</h5>
+          <blockquote class="testimonial__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Accusantium quas quisquam non? Quas voluptate nulla minima
+            deleniti optio ullam nesciunt, numquam corporis et asperiores
+            laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
+            id alias reiciendis, perferendis facere pariatur dolore veniam
+            autem esse non voluptatem saepe provident nihil molestiae.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img2/user-1.jpg" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Aarav Lynn</h6>
+            <p class="testimonial__location">San Francisco, USA</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="testimonial">
+          <h5 class="testimonial__header">I like Birds!!</h5>
+          <blockquote class="testimonial__text">
+            Quisquam itaque deserunt ullam, quia ea repellendus provident,
+            ducimus neque ipsam modi voluptatibus doloremque, corrupti
+            laborum. Incidunt numquam perferendis veritatis neque repellendus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+            deserunt exercitationem deleniti.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img2/user-2.jpg" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Miyah Miles</h6>
+            <p class="testimonial__location">London, UK</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="testimonial">
+          <h5 class="testimonial__header">I enjoy BCR Lab!</h5>
+          <blockquote class="testimonial__text">
+            Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+            incidunt commodi architecto numquam omnis nulla autem,
+            necessitatibus blanditiis modi similique quidem. Odio aliquam
+            culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
+            deleniti saepe aliquid quos inventore sequi. Necessitatibus id
+            alias reiciendis, perferendis facere.
+          </blockquote>
+          <address class="testimonial__author">
+            <img src="img2/user-3.jpg" alt="" class="testimonial__photo" />
+            <h6 class="testimonial__name">Francisco Gomes</h6>
+            <p class="testimonial__location">Lisbon, Portugal</p>
+          </address>
+        </div>
+      </div>
+
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <section class="section section--sign-up">
+    <div class="section__title">
+      <h3 class="section__header"></h3>
+    </div>
+    <button class="btn btn--show-modal">Log in</button>
+  </section>
+
+  <div class="modal hidden">
+    <button class="btn--close-modal">&times;</button>
+    <h2 class="modal__header">
+      Log in <br />
+      in BCR Lab for<span class="highlight"> more features</span>
+    </h2>
+    <form class="modal__form">
+      <label>First Name</label>
+      <input type="text" />
+      <label>Last Name</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <button class="btn">Next step &rarr;</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+
+  <!-- <script src="script.js"></script> -->
+</body>
+
 </html>
